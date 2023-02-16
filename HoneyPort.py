@@ -19,7 +19,7 @@ UP_KEY = '\x1b[A'.encode() ; DOWN_KEY = '\x1b[B'.encode()
 RIGHT_KEY = '\x1b[C'.encode() ; LEFT_KEY = '\x1b[D'.encode()
 BACK_KEY = '\x7f'.encode()
 #####################################################
-if port==22 or port==20022:
+if port==22 or port==2022:
 	banner="SSH-2.0-OpenSSH_8.4p1 Debian-5+deb11u1"
 	welcome="\r\nWelcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-128-generic x86_64)\r\n\r\n"
 	prompt="pi@raspberry:~ $"
