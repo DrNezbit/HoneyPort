@@ -26,7 +26,6 @@ if port==22 or port==20022:
 #####################################################
 logging.basicConfig(
     format='> **%(levelname)s** - %(message)s```',
-    #datefmt='%m/%d/%Y %I:%M:%S %p %z',
     level=logging.INFO,
     filename="./logs/HoneyPort.log")
 #####################################################
@@ -65,7 +64,6 @@ class MyPot:
 			dt=self.get_datetime()
 			self.mysocket.bind((self.HOST, self.PORT))
 			self.mysocket.listen(10)
-			#logging.info('Socket bind complete')
 			logging.info("%s Listening for connection on port %s",dt,self.PORT)
 			print(f"{dt} Running on port {self.PORT}")
 		except socket.error as msg:
@@ -92,7 +90,6 @@ class MyPot:
 						target=self.threaded_client, args=(conn, ip))
 					new_thread.start() ; threads.append(new_thread)
 					for thread in threads: thread.join()
-					#start_new_thread(self.threaded_client,(conn,ip))
 		except error as err:
 			logging.error("%s",err)
 			print(err) ; self.mysocket.close()
