@@ -1,0 +1,12 @@
+version: "3"
+services:
+  honeyport:
+    container_name: HoneyPort
+    build: .
+    image: honeyport/beta:v1
+    volumes:
+      - ./honeyport/:/honeyport
+    ports: 
+    #(external:internal) 202->22
+      - "202:22"
+    restart: unless-stopped
