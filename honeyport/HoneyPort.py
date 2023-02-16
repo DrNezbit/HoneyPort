@@ -14,7 +14,7 @@ bind=args.bind
 banner=None
 prompt=None
 welcome=None
-
+#####################################################
 if "logs" not in os.listdir("./"): os.mkdir("./logs")
 #####################################################
 UP_KEY = '\x1b[A'.encode() ; DOWN_KEY = '\x1b[B'.encode()
