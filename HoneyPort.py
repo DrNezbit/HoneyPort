@@ -4,7 +4,7 @@ import datetime,asyncio
 from _thread import *
 #####################################################
 parser = argparse.ArgumentParser(description='Run a HoneyPort server')
-parser.add_argument("--port", "-p", help="The port to bind the server to (default 22)", default=20022, type=int, action="store")
+parser.add_argument("--port", "-p", help="The port to bind the server to (default 2022)", default=2022, type=int, action="store")
 parser.add_argument("--bind", "-b", help="The address to bind the ssh server to", default="", type=str, action="store")
 args = parser.parse_args()
 #####################################################
