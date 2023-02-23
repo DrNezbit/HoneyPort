@@ -29,7 +29,6 @@ if port==22:
 if "logs" not in os.listdir("./"): os.mkdir("./logs")
 logging.basicConfig(
     format='> **%(levelname)s** - %(message)s```',
-    #datefmt='%m/%d/%Y %I:%M:%S %p %z',
     level=logging.INFO,
     filename="./logs/HoneyPort.log")
 #####################################################
