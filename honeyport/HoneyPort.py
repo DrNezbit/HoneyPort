@@ -4,7 +4,7 @@ import datetime,asyncio
 from _thread import *
 #####################################################
 parser = argparse.ArgumentParser(description='Run a HoneyPort server')
-parser.add_argument("--port", "-p", help="The port to bind the server to (default 22)", default=22, type=int, action="store")
+parser.add_argument("--port", "-p", help="The port to bind the server to (default 202)", default=202, type=int, action="store")
 parser.add_argument("--bind", "-b", help="The address to bind the server to", default="", type=str, action="store")
 args = parser.parse_args()
 #####################################################
@@ -21,7 +21,7 @@ UP_KEY = '\x1b[A'.encode() ; DOWN_KEY = '\x1b[B'.encode()
 RIGHT_KEY = '\x1b[C'.encode() ; LEFT_KEY = '\x1b[D'.encode()
 BACK_KEY = '\x7f'.encode()
 #####################################################
-if port==22:
+if port in [22, 202]:
 	banner="SSH-2.0-OpenSSH_8.4p1 Debian-5+deb11u1"
 	welcome="\r\nWelcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-128-generic x86_64)\r\n\r\n"
 	prompt="pi@raspberry:~ $"
